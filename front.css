@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://cdn.vectorstock.com/i/500p/15/71/abstract-3d-luxury-black-color-wave-lines-vector-43391571.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+
+.welcome-message {
+    text-align: center;
+    position: absolute;
+    top: 130px;
+    width: 100%;
+}
+
+.title {
+    font-size: 2em;
+    color: #fff; /* White text color for contrast */
+    margin-top: 30px; /* Adjusted to move heading down */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+
+.instructions-message {
+    text-align: center;
+    margin-top: 20px; /* Space from the top of the viewport */
+}
+
+.instructions {
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 20px; /* Space between instructions and form */
+}
+
+.welcome-screen {
+    background: rgba(61,61,61 0.9); /* Black background with 80% opacity */
+    padding: 20px;
+    width: 70%;
+    max-width: 500px;
+    min-height: 180px; /* Adjusted height */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+    margin: 0 auto; /* Center container */
+}
+
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: white;
+}
+
+input {
+    padding: 10px;
+    font-size: 1em;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.submit-btn {
+    background-color: blue;
+    color: black;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 40px; /* Increase the gap above the button */
+}
+
+.submit-btn:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
+
+
+
+
+.hidden {
+    display: none;
+}
+
+.quiz-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}

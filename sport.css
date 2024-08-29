@@ -1,0 +1,218 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    /* text-align: center; */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 100vh; 
+    background-image: url('https://cdn.photoroom.com/v2/image-cache?path=gs://background-7ef44.appspot.com/backgrounds_v3/black/Photoroom_black_background_extremely_fine_texture_only_black_co_ae046469-872f-44da-af94-291c08dd6498.jpg'); /* Image ka path yahan specify karein */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* Image ki opacity adjust karein (0 to 1 range) */
+    z-index: -1; 
+}
+
+#quiz-container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#question {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#options-container label {
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: gray;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+#options-container label:hover {
+    background-color: white;
+}
+
+.correct {
+    color: #00ff00;
+}
+
+.incorrect {
+    color: #ff0000;
+}
+
+#next-btn {
+    padding: 10px 20px;
+    margin: 20px 10px;
+    background-color: blue;
+    width: 80px;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+#next-btn:hover {
+    background-color: white;
+    border: 2px solid black;
+}
+
+#age-selection, #back-btn-bottom{
+    margin-bottom: 20px;
+    /* display: none; */
+    
+}
+#back-btn-bottom{
+    padding: 10px 20px;
+    background-color: blue;
+    width: 80px;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+.btn-container {
+    display: flex;
+    justify-content: space-between; /* Adjusts spacing between buttons */
+    align-items: center; /* Centers buttons vertically if they are different heights */
+}
+
+#age-selection {
+    margin-bottom: 20px;
+    /* display: none; */
+    
+}
+
+.age-btn {
+    background-color: gray;
+    color: #0a0808;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 2px solid black;
+}
+
+.age-btn:hover {
+    background-color: white;
+}
+
+#restart-btn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: blue;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+#restart-btn:hover {
+    background-color: white;
+    border: 2px solid ;
+}
+
+#message-container {
+    text-align: center;
+}
+
+#message-container img {
+    width: 50%; /* Adjust size as needed */
+    max-width: 300px;
+    height: auto;
+}
+
+#congratulation-message,
+#appreciation-message {
+    display: none; /* Hide messages initially */
+}
+
+#congratulation-message h2,
+#appreciation-message h2 {
+    font-size: 36px;
+    color: #00ff00; /* Green for congratulation */
+}
+
+#appreciation-message h2 {
+    color: #ff9900; /* Orange for appreciation */
+}
+
+/* Conflict pop-up animation */
+@keyframes conflictPopUp {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#congratulation-message {
+    display: none; /* Hidden initially */
+    text-align: center;
+    animation: conflictPopUp 0.5s ease-in-out forwards; /* Apply the pop-up animation */
+}
+
+#congratulation-message img {
+    width: 50%; /* Adjust the size of the image */
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto; /* Center the image */
+}
+/* Basic styling for header to use Flexbox */
+/* Style for larger screens */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Style for smaller screens */
+@media (max-width: 600px) {
+    #header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    #timer-display,
+    #questions-completed,
+    #questions-remaining,
+    #score {
+        margin-bottom: 10px;
+    }
+}
+

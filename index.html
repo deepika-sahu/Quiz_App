@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz Front Page</title>
+    <link rel="stylesheet" href="front.css">
+</head>
+<body>
+    <div class="welcome-message">
+        <h1 class="title">Welcome to the Quiz!</h1>
+    </div>
+    <div class="instructions-message">
+        <p class="instructions">Get ready to test your knowledge. Click the button below to start the quiz.</p>
+    </div>
+    <div id="welcome-screen" class="welcome-screen">
+        <form id="user-form" class="form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <button type="submit" class="submit-btn"disabled>Start Quiz</button>
+        </form>
+    </div>
+    <div id="quiz-container" class="quiz-container hidden">
+        <!-- Quiz content will go here -->
+        <!-- <p>Quiz will start here...</p> -->
+    </div>
+    
+
+    <script src="front.js"></script>
+</body>
+
+</html>
+
